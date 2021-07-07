@@ -1,34 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## eslint configuration
 
-## Getting Started
+(1) npm install eslint -D
 
-First, run the development server:
+(2) npx eslint --fix
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## (3) npx eslint --init
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+(i) How would you like to use ESLint? >> To check syntax, find problems, and enforce code style
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+(ii) What type of modules does your project use? >> JavaScript modules (import/export)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+(iii) Which framework does your project use? >> react
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+(iv) Does your project use TypeScript? >> NO
 
-## Learn More
+(v) Where does your code run? >> (press a because, both select - browser and node )
 
-To learn more about Next.js, take a look at the following resources:
+(vi) How would you like to define a style for your project? >> Use a popular style guide
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+(vii) Which style guide do you want to follow? >> Standard: https://github.com/standard/standard
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+(viii) What format do you want your config file to be in? >> javascript
 
-## Deploy on Vercel
+(ix) Would you like to install them now with npm? >>NO
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+(x) npm install >> (eslint-plugin-react eslint-config-standard eslint eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+(xi) npm install eslint-plugin-prettier
+
+(xii) npx eslint .
+
+(xiii) npx eslint . --fix
+
+## prettier
+
+(1) npm install eslint-config-prettier -D
+
+(2) npm install prettier -D
+
+(3) create newfile >> .prettierrc and paste rule
+
+(4) npx prettier . --check
+
+(5) npx prettier . --write
+
+## npx mrm lint-staged
+
+(1) added in package json
+
+"husky":{
+"hooks":{
+"pre-commit":"lint-staged"
+}
+},
+
+"lint-staged": {
+"_.js": "eslint --cache --fix",
+"_.{js,css,md}": "prettier --write"
+}
