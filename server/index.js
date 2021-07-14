@@ -1,13 +1,13 @@
-// const getConfig = require('../next.config');
+const getConfig = require('../next.config');
 const express = require('express');
 const next = require('next');
 const bodyParser = require('body-parser');
-// const { publicRuntimeConfig } = getConfig();
+const { publicRuntimeConfig } = getConfig();
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
-const port = process.env.PORT || 4500;
+const port = process.env.PORT || publicRuntimeConfig.PORT;
 
 app.prepare().then(() => {
   const server = express();
