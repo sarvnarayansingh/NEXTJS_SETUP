@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_ENV=development node server/index.js",
     "build": "next build",
     "start": "next start",
     "prepare": "husky install"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "express": "^4.17.1",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",

@@ -1,22 +1,22 @@
 const RULES = {
   OFF: 'off',
   WARN: 'warn',
-  ERROR: 'error',
+  ERROR: 'error'
 };
 
 module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true,
+    node: true
   },
   extends: ['plugin:react/recommended', 'standard'],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     ecmaVersion: 12,
-    sourceType: 'module',
+    sourceType: 'module'
   },
   plugins: ['react', 'prettier'],
   rules: {
@@ -30,6 +30,6 @@ module.exports = {
     // we use 2 spaces to indent our code
     indent: ['error', 2],
     // we want to avoid useless spaces
-    'no-multi-spaces': ['error'],
-  },
+    'no-multi-spaces': ['error']
+  }
 };
