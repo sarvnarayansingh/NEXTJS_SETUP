@@ -1,28 +1,9 @@
+// import getConfig from 'next/config';
 
-import { useEffect } from 'react';
-import { connect } from 'react-redux';
-import * as actionCreator from '../Redux/Actions/ActionCreator/GlobalAction';
+// const { publicRuntimeConfig } = getConfig();
 
-const Home = (props) => {
-  useEffect(() => {
-    props.getTicketDetailAction();
-  }, []);
-  return (
-    <div>
-      <h2>hellooooooo</h2>
-    </div>
-  );
+const Homepage = (props) => {
+  return <div>homePage</div>;
 };
 
-const mapStateToProps = (state) => {
-  console.log('state', state.globalData);
-  return {
-    globalData: state.globalData.globalStore
-  };
-};
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getTicketDetailAction: (payload) => dispatch(actionCreator.getTicketDetailAction(payload))
-  };
-};
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default Homepage;

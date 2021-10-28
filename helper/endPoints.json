@@ -1,0 +1,4 @@
+{
+  "getTicketDetailApi": "/GYFTR_API_Chatboat.aspx?Method=GetTicketDetails",
+  "getTicketMobileApi":"/GYFTR_API_Chatboat.aspx?Method=GetAllTickets"
+}

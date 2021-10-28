@@ -1,3 +1,0 @@
-export const NAV_DATA_INIT = 'NAV_DATA_INIT';
-export const NAV_DATA_SUCCESS = 'NAV_DATA_SUCCESS';
-export const NAV_DATA_ERROR = 'NAV_DATA_ERROR';

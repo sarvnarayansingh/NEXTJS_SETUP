@@ -6,25 +6,25 @@ module.exports = {
       use: [
         {
           loader: 'expose-loader',
-          options: 'jQuery'
+          options: 'jQuery',
         },
         {
           loader: 'expose-loader',
-          options: '$'
+          options: '$',
         },
         {
           loader: 'expose-loader',
-          options: 'jquery'
-        }
-      ]
+          options: 'jquery',
+        },
+      ],
     });
     webConfig.plugins.push(
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',
-        'window.jQuery': 'jquery'
+        'window.jQuery': 'jquery',
       })
     );
     return webConfig;
-  }
+  },
 };
